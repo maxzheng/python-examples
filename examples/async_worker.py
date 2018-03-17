@@ -1,9 +1,9 @@
 """
 Feature: Using asyncio to run tasks concurrently in the background
 
-Sample output::
+Example Run:
 
-    $ python3 complete-python.py
+    $ python3 async_worker.py
     [0 running tasks]
     Running "Task 2"
     Running "Task 1"
@@ -38,6 +38,9 @@ class AsyncManager:
         asyncio.run_until_complete(manager.do_things_concurrently())
     """
 
+    # Number of seconds to finish a task
+    _TASK_DURATION = 1
+
     def __init__(self, tasks):
         """
         :param int tasks: Number of concurrent tasks to run
@@ -48,20 +51,21 @@ class AsyncManager:
         # Number of currently running tasks.
         self._running_tasks = 0
 
-    async def _run_background_task(self, name, delay=1):
+    async def _run_background_task(self, name, delay_multiplier=1):
         """
         Run a task in the background
 
         :param str name: Name of the task
-        :param int delay: Number of seconds to wait before completing the task
+        :param int delay_multiplier: Multiple the task duration by this delay multiplier for final task duration for the worker
         """
         self._running_tasks += 1
+        task_duration = self._TASK_DURATION * delay_multiplier
 
         print('Running "{}"'.format(name))
-        await asyncio.sleep(delay)
+        await asyncio.sleep(task_duration)  # Best way to pretend to do work!
 
         self._running_tasks -= 1
-        return 'Done with {n} after {d} seconds!'.format(n=name, d=delay)
+        return 'Done with {n} after {d} seconds!'.format(n=name, d=task_duration)
 
     async def do_things_concurrently(self):
         """ Run all tasks concurrently """
@@ -73,7 +77,7 @@ class AsyncManager:
         # Create the coroutine objects
         for task_id in range(self.tasks):
             delay = 3 - task_id
-            coro = self._run_background_task("Task " + str(task_id), delay=delay)
+            coro = self._run_background_task("Task " + str(task_id), delay_multiplier=delay)
             task_coros.append(coro)
 
         # Start running all coroutines and wait for each to complete
@@ -92,7 +96,7 @@ class AsyncManager:
                 print("[{} running tasks]".format(self._running_tasks))
                 last_running_tasks = self._running_tasks
 
-            await asyncio.sleep(0)  # Let's other coroutines do work instead of blocking
+            await asyncio.sleep(0)  # Let other coroutines do work instead of blocking
 
 
 if __name__ == "__main__":
