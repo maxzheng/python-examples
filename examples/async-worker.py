@@ -17,12 +17,8 @@ Sample output::
     Done with Task 0 after 3 seconds!
 """
 
-# Imports are at the top, and generally have 3 groups separated by blank line: built-in, 3rd party on PyPI, and internal
-import asyncio                      # Import a package
-from asyncio import get_event_loop  # Import a single item from a package
-
-# Constants are capitalized by convention
-COMPLETED_TASKS_FILE = "completed_tasks.log"
+import asyncio
+from asyncio import get_event_loop
 
 
 def main():
