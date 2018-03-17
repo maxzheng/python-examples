@@ -1,20 +1,25 @@
 """
-Feature: Using asyncio to run tasks concurrently in the background
+Using asyncio to run tasks concurrently in the background
+=============================================================================
 
-Example Run:
+Example Run
+-----------------------------------------------------------------------------
+$ python3 async_worker.py
+[0 running tasks]
+Running "Task 2"
+Running "Task 1"
+Running "Task 0"
+[3 running tasks]
+[2 running tasks]
+Done with Task 2 after 1 seconds!
+[1 running tasks]
+Done with Task 1 after 2 seconds!
+[0 running tasks]
+Done with Task 0 after 3 seconds!
 
-    $ python3 async_worker.py
-    [0 running tasks]
-    Running "Task 2"
-    Running "Task 1"
-    Running "Task 0"
-    [3 running tasks]
-    [2 running tasks]
-    Done with Task 2 after 1 seconds!
-    [1 running tasks]
-    Done with Task 1 after 2 seconds!
-    [0 running tasks]
-    Done with Task 0 after 3 seconds!
+References
+-----------------------------------------------------------------------------
+https://docs.python.org/3/library/asyncio.html
 """
 
 import asyncio
@@ -56,7 +61,9 @@ class AsyncManager:
         Run a task in the background
 
         :param str name: Name of the task
-        :param int delay_multiplier: Multiple the task duration by this delay multiplier for final task duration for the worker
+        :param int delay_multiplier: Multiple the task duration by this delay
+                                     multiplier for final task duration for
+                                     the worker
         """
         self._running_tasks += 1
         task_duration = self._TASK_DURATION * delay_multiplier
@@ -65,19 +72,21 @@ class AsyncManager:
         await asyncio.sleep(task_duration)  # Best way to pretend to do work!
 
         self._running_tasks -= 1
-        return 'Done with {n} after {d} seconds!'.format(n=name, d=task_duration)
+        return 'Done with {n} after {d} seconds!'.format(n=name,
+                                                         d=task_duration)
 
     async def do_things_concurrently(self):
         """ Run all tasks concurrently """
         task_coros = []
 
-        # Run the coroutine in the background without waiting for it (like daemonize)
+        # Run the coroutine in the background without waiting for it
         show_task = asyncio.ensure_future(self._show_running_tasks())
 
         # Create the coroutine objects
         for task_id in range(self.tasks):
             delay = 3 - task_id
-            coro = self._run_background_task("Task " + str(task_id), delay_multiplier=delay)
+            coro = self._run_background_task("Task " + str(task_id),
+                                             delay_multiplier=delay)
             task_coros.append(coro)
 
         # Start running all coroutines and wait for each to complete
@@ -96,7 +105,8 @@ class AsyncManager:
                 print("[{} running tasks]".format(self._running_tasks))
                 last_running_tasks = self._running_tasks
 
-            await asyncio.sleep(0)  # Let other coroutines do work instead of blocking
+            # Let other coroutines do work instead of blocking
+            await asyncio.sleep(0)
 
 
 if __name__ == "__main__":
