@@ -23,11 +23,10 @@ https://docs.python.org/3/library/asyncio.html
 """
 
 import asyncio
-from asyncio import get_event_loop
 
 
 def main():
-    loop = get_event_loop()
+    loop = asyncio.get_event_loop()
     manager = AsyncManager(3)
 
     loop.run_until_complete(manager.do_things_concurrently())
