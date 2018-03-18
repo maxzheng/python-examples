@@ -11,11 +11,11 @@ tests. Feel free to copy and use in your projects!
 
 Select the topic that interests you and tinker!
 
-Async Programming
+Async IO
 -----------------------------------------------------------------------------
 * `Understanding async programming <examples/understanding_async.py>`_
 * `Using asyncio to run tasks concurrently in the background <examples/async_worker.py>`_
 
-Misc
+Functions
 -----------------------------------------------------------------------------
 * `Use decorators to make functions more fun <examples/decorator.py>`_
