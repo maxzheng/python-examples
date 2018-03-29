@@ -15,6 +15,7 @@ Async IO
 -----------------------------------------------------------------------------
 * `Understanding async programming <examples/understanding_async.py>`_
 * `Using asyncio to run tasks concurrently in the background <examples/async_worker.py>`_
+* `Making HTTP requests <examples/async_http_requests.py>`_
 
 Functions
 -----------------------------------------------------------------------------
