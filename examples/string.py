@@ -8,7 +8,11 @@ operations also work as well.
 
 Example Run
 -----------------------------------------------------------------------------
-
+$ python3 sring.py
+This is a literal string
+Single quote works exactly the same
+It join using space between them
+...
 
 References
 -----------------------------------------------------------------------------

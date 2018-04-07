@@ -13,17 +13,17 @@ Select the topic that interests you and tinker!
 
 Basics
 -----------------------------------------------------------------------------
-* `String manipulation <examples/string.py>`
+* `String manipulation <examples/string.py>`_
+
+Functions
+-----------------------------------------------------------------------------
+* `Use decorators to make functions more fun <examples/decorator.py>`_
 
 Async IO
 -----------------------------------------------------------------------------
 * `Understanding async programming <examples/understanding_async.py>`_
 * `Using asyncio to run tasks concurrently in the background <examples/async_worker.py>`_
 * `Making HTTP requests <examples/async_http_requests.py>`_
-
-Functions
------------------------------------------------------------------------------
-* `Use decorators to make functions more fun <examples/decorator.py>`_
 
 Did you find them useful and want to see more? Watch or star the repo to let me know,
 and I will add more! :)
