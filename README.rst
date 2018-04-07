@@ -6,15 +6,18 @@ Learn Python using code examples that you can run!
 Reading documentation is a good start to learn something new, but the real
 learning starts by practicing and tinkering. That's the philosophy behind
 this collection of examples. Each example is code that you can easily run so
-that you can tinker with them. They are well documented and comes with
-tests. Feel free to copy and use in your projects!
+that you can tinker with them. They are well documented and some even have
+tests. New to Python? See more `recommended resources to learn Python`__.
+
+__ http://www.ctl.life/2018/03/recommended-resources-for-learning.html
 
 Select the topic that interests you and tinker!
 
 Basics
 -----------------------------------------------------------------------------
 * `Number crunching <examples/numbers.py>`_
-* `String manipulation <examples/string.py>`_
+* `String manipulation <examples/strings.py>`_
+* `Files and directories <examples/files.py>`_
 
 Functions
 -----------------------------------------------------------------------------
