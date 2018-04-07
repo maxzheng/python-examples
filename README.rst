@@ -13,6 +13,7 @@ Select the topic that interests you and tinker!
 
 Basics
 -----------------------------------------------------------------------------
+* `Number crunching <examples/numbers.py>`_
 * `String manipulation <examples/string.py>`_
 
 Functions
