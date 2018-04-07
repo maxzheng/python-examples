@@ -11,6 +11,10 @@ tests. Feel free to copy and use in your projects!
 
 Select the topic that interests you and tinker!
 
+Basics
+-----------------------------------------------------------------------------
+* `String manipulation <examples/string.py>`
+
 Async IO
 -----------------------------------------------------------------------------
 * `Understanding async programming <examples/understanding_async.py>`_
@@ -20,3 +24,6 @@ Async IO
 Functions
 -----------------------------------------------------------------------------
 * `Use decorators to make functions more fun <examples/decorator.py>`_
+
+Did you find them useful and want to see more? Watch or star the repo to let me know,
+and I will add more! :)
