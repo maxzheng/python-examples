@@ -85,6 +85,8 @@ works too!""")
     united = hello + ' one ' + world
     print(united)           # hello one world
 
+    print('one' in united)  # True
+
 
 if __name__ == "__main__":
     main()

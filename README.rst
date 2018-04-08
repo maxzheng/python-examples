@@ -20,7 +20,7 @@ Basics
 * `Files and directories <examples/files.py>`_
 * `Flow control and loops <example/flow_and_loops.py>`_
 
-Functions
+Special Functions
 -----------------------------------------------------------------------------
 * `Use decorators to make functions more fun <examples/decorator.py>`_
 
