@@ -18,6 +18,7 @@ Basics
 * `Number crunching <examples/numbers.py>`_
 * `String manipulation <examples/strings.py>`_
 * `Files and directories <examples/files.py>`_
+* `Flow control and loops <example/flow_and_loops.py>`_
 
 Functions
 -----------------------------------------------------------------------------
@@ -29,5 +30,25 @@ Async IO
 * `Using asyncio to run tasks concurrently in the background <examples/async_worker.py>`_
 * `Making HTTP requests <examples/async_http_requests.py>`_
 
-Did you find them useful and want to see more? Watch or star the repo to let me know,
-and I will add more! :)
+How to Tinker
+-----------------------------------------------------------------------------
+
+.. code-block:: bash
+
+    # 1) Checkout
+    $ git clone https://github.com/maxzheng/python-examples.git
+    $ cd python-examples/examples
+    $ ls
+    async_http_requests.py  async_worker.py  decorator.py  files.py  numbers.py
+    ...
+
+    # 2) Run
+    $ python3 numbers.py
+
+    # 3) Edit using your favorite text editor
+    $ vi numbers.py
+
+    # Repeat steps 2 & 3
+
+Did you find the examples useful and helpful to learn Python and want to see more?
+Watch or star the repo to let me know, and I will add more. ;)
