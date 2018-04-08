@@ -1,5 +1,7 @@
-python-examples
+|python-logo| Learn Python by Examples
 ============================================================================
+
+.. |python-logo| image:: python.png
 
 Learn Python using code examples that you can run!
 
