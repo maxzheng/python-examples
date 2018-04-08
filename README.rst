@@ -19,6 +19,7 @@ Basics
 * `String manipulation <examples/strings.py>`_
 * `Files and directories <examples/files.py>`_
 * `Flow control and loops <example/flow_and_loops.py>`_
+* `Code reuse using functions <example/functions.py>`_
 
 Special Functions
 -----------------------------------------------------------------------------
@@ -50,5 +51,5 @@ How to Tinker
 
     # Repeat steps 2 & 3
 
-Did you find the examples useful and helpful to learn Python and want to see more?
+Did you find the examples helpful to learn Python and want to see more?
 Watch or star the repo to let me know, and I will add more. ;)
