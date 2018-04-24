@@ -33,6 +33,11 @@ Async IO
 * `Using asyncio to run tasks concurrently in the background <examples/async_worker.py>`_
 * `Making HTTP requests <examples/async_http_requests.py>`_
 
+Applications
+-----------------------------------------------------------------------------
+* `Cron Clone: Run commands at set times <examples/cron.py>`_
+
+
 How to Tinker
 -----------------------------------------------------------------------------
 
