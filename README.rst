@@ -20,8 +20,9 @@ Basics
 * `Number crunching <examples/numbers.py>`_
 * `String manipulation <examples/strings.py>`_
 * `Files and directories <examples/files.py>`_
-* `Flow control and loops <example/flow_and_loops.py>`_
-* `Code reuse using functions <example/functions.py>`_
+* `Flow control and loops <examples/flow_and_loops.py>`_
+* `Code reuse using functions <examples/functions.py>`_
+* `PEP8+ code style for better code <examples/code_style.py>`_
 
 Special Functions
 -----------------------------------------------------------------------------
